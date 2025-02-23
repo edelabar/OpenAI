@@ -57,6 +57,51 @@ public extension ChatCompletions {
         /// * Training data: Up to Sep 2021
         case gpt4_32k_0613 = "gpt-4-32k-0613"
         
+        // MARK: - GTP-4o
+        
+        /// GPT-4o (“o” for “omni”) is our versatile, high-intelligence flagship model. It accepts both text and image
+        /// inputs, and produces text outputs (including Structured Outputs). Learn how to use GPT-4o in our text
+        /// generation guide.
+        /// * Context window: 128,000
+        /// * Training data: Up to October 2023
+        case gpt4o = "gpt-4o" // alias gpt-4o-2024-08-06 as-of 2025/02/23
+        
+        /// Snapshot of gpt-4o from November 20th 2024. Unlike gpt-4o, this model will not receive updates.
+        /// * Context window: 128,000
+        /// * Training data: Up to October 2023
+        case gpt4o_20241120 = "gpt-4o-2024-11-20"
+        
+        /// Snapshot of gpt-4o from August 6th 2024. Unlike gpt-4o, this model will not receive updates.
+        /// * Context window: 128,000
+        /// * Training data: Up to October 2023
+        case gpt4o_20240806 = "gpt-4o-2024-08-06"
+        
+        /// Snapshot of gpt-4o from May 13th 2024. Unlike gpt-4o, this model will not receive updates.
+        /// * Context window: 128,000
+        /// * Training data: Up to October 2023
+        case gpt4o_20240513 = "gpt-4o-2024-05-13"
+        
+        /// Snapshot of gpt-4o currently used in ChatGPT.
+        /// * Context window: 128,000
+        /// * Training data: Up to October 2023
+        case gpt4o_latest = "chatgpt-4o-latest"
+        
+        // MARK: - GTP-4o mini
+        
+        /// GPT-4o mini (“o” for “omni”) is a fast, affordable small model for focused tasks. It accepts both text and
+        /// image inputs, and produces text outputs (including Structured Outputs). It is ideal for fine-tuning, and model
+        /// outputs from a larger model like GPT-4o can be distilled to GPT-4o-mini to produce similar results at lower
+        /// cost and latency.
+        /// * Context window: 128,000
+        /// * Training data: Up to October 2023
+        case gpt4o_mini = "gpt-4o-mini" // alias gpt-4o-2024-07-18 as-of 2025/02/23
+        
+        /// Snapshot of gpt-4o mini from July 18th 2024. Unlike gpt-4o-mini, this model will not receive updates.
+        /// * Context window: 128,000
+        /// * Training data: Up to October 2023
+        case gpt4o_mini_20240718 = "gpt-4o-mini-2024-07-18"
+        
+        
         // MARK: - GTP-3.5
         
         /// The latest GPT-3.5 Turbo model with improved instruction following, JSON mode,

@@ -45,9 +45,9 @@ public struct BaseRequestHandler: RequestHandler {
         
         return AsyncThrowingStream { continuation in
             Task {
-                let dataTask = eventSource.dataTask(for: urlRequest)
+                let dataTask = await eventSource.dataTask(for: urlRequest)
                 
-                for await event in dataTask.events() {
+                for await event in await dataTask.events() {
                     switch event {
                     case .open:
                         continue
@@ -59,7 +59,7 @@ public struct BaseRequestHandler: RequestHandler {
                             break
                         }
                         continue
-                    case .message(let message):
+                    case .event(let message):
                         guard let stringData = message.data else {
                             continue
                         }

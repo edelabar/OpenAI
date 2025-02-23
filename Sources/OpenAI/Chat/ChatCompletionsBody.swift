@@ -22,6 +22,10 @@ public extension ChatCompletions {
                 self.content = content
                 self.name = name
             }
+            
+            public static func developer(_ content: String) -> Self {
+                Self(role: .developer, content: content)
+            }
 
             public static func system(_ content: String) -> Self {
                 Self(role: .system, content: content)
